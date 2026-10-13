@@ -41,7 +41,7 @@ border:1px solid var(--line);background:var(--glass)}.social svg{width:18px;heig
 .btn.ghost{background:transparent;color:var(--text);border:1px solid var(--line);box-shadow:none}
 .btn.ghost:hover{border-color:var(--cyan);box-shadow:0 0 18px rgba(0,229,255,.3)}
 section{margin-top:12px}
-.player{padding:10px}.player iframe{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:12px;background:#000}
+.player{padding:10px;max-width:400px;margin:0 auto}.player iframe{display:block;width:100%;aspect-ratio:9/16;border:0;border-radius:12px;background:#000}
 .tags{display:flex;flex-wrap:wrap;gap:8px}.tags span{font:600 .85rem ui-monospace,Consolas,monospace;padding:6px 12px;
 border-radius:999px;border:1px solid var(--line);background:var(--glass);color:#cfe9f2}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
