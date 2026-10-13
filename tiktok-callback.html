@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Autorização TikTok</title>
+<link rel="icon" href="favicon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <header><img src="logo.png" alt="Logo Empresa Blindada"><div><h1>Autorização do TikTok</h1>
+  <div class="muted">Uso interno do canal Empresa Blindada</div></div></header>
+  <div class="card">
+    <p id="msg">Lendo o retorno do TikTok…</p>
+    <p><code id="code" style="font-size:1.1rem;word-break:break-all"></code></p>
+    <p class="muted">Copie o código acima e cole no programa de autorização do worker. Ele vale por poucos minutos e
+    só funciona uma vez. Esta página não envia nada para lugar nenhum.</p>
+  </div>
+</main>
+<script>
+  const q = new URLSearchParams(location.search);
+  const code = q.get('code'), err = q.get('error');
+  document.getElementById('msg').textContent = code ? 'Autorização concedida. Seu código:' :
+    (err ? 'O TikTok recusou a autorização: ' + err : 'Nenhum código recebido.');
+  if (code) document.getElementById('code').textContent = code + (q.get('state') ? '  (state: ' + q.get('state') + ')' : '');
+</script>
+</body>
+</html>
