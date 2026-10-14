@@ -11,15 +11,17 @@
 <main>
   <header>
     <img src="logo.png" alt="Logo Empresa Blindada">
-    <div><h1>Política de Privacidade</h1><div class="muted">Última atualização: 11 de outubro de 2026</div></div>
+    <div><h1>Política de Privacidade</h1><div class="muted">Última atualização: 14 de outubro de 2026</div></div>
   </header>
 
   <p>Esta política descreve como o aplicativo de publicação do canal <strong>Empresa Blindada</strong>
-  (registrado no Google como "JARVIS Video Factory") usa dados de contas Google.</p>
+  (registrado no Google como "JARVIS Video Factory" e no TikTok como "jarvis-tiktok") usa dados de contas
+  Google e TikTok.</p>
 
   <h2>1. Finalidade do aplicativo</h2>
   <p>O aplicativo é de uso interno do próprio responsável pelo canal. Ele envia vídeos produzidos pelo
-  canal para o YouTube, usando a API de Dados do YouTube, na conta do próprio responsável. Não é
+  canal para o YouTube (API de Dados do YouTube) e para o TikTok (Login Kit e Content Posting API), sempre na
+  conta do próprio responsável. Não é
   oferecido ao público nem usado em contas de terceiros.</p>
 
   <h2>2. Dados acessados</h2>
@@ -28,6 +30,15 @@
     <li>Leitura básica do canal autorizado (<code>youtube.readonly</code>), para confirmar a publicação.</li>
   </ul>
   <p>O aplicativo não acessa e-mails, contatos, arquivos nem outros dados da conta Google.</p>
+  <p>No TikTok:</p>
+  <ul>
+    <li>Informações básicas do perfil (<code>user.info.basic</code>): nome e apelido da conta conectada, exibidos
+      na página de publicação.</li>
+    <li>Envio e publicação de vídeos (<code>video.upload</code>, <code>video.publish</code>): somente os vídeos que o
+      responsável aprova, com a privacidade que ele escolhe.</li>
+    <li>Lista dos próprios vídeos (<code>video.list</code>): para registrar o link de cada vídeo publicado.</li>
+  </ul>
+  <p>O aplicativo não acessa mensagens, seguidores, contatos nem dados de outros usuários do TikTok.</p>
 
   <h2>3. Armazenamento e compartilhamento</h2>
   <p>O token de autorização fica armazenado apenas no computador do responsável pelo canal. Nenhum dado
@@ -41,9 +52,16 @@
   <a href="https://www.youtube.com/t/terms">Termos de Serviço do YouTube</a> e a
   <a href="https://policies.google.com/privacy">Política de Privacidade do Google</a>.</p>
 
+  <h2>4b. TikTok</h2>
+  <p>O uso de dados do TikTok segue os <a href="https://www.tiktok.com/legal/page/global/terms-of-service/en">Termos de
+  Serviço</a> e a <a href="https://www.tiktok.com/legal/page/row/privacy-policy/en">Política de Privacidade do TikTok</a>
+  e os <a href="https://developers.tiktok.com/doc/our-guidelines-developer-guidelines">termos para desenvolvedores</a>.
+  Vídeos publicados são marcados como conteúdo gerado por IA.</p>
+
   <h2>5. Revogação do acesso</h2>
   <p>O acesso pode ser revogado a qualquer momento em
   <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.
+  ou, no TikTok, em <b>Configurações e privacidade → Segurança → Apps e serviços</b>.
   Após a revogação, o token local deixa de funcionar.</p>
 
   <h2>6. Contato</h2>
