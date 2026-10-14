@@ -24,11 +24,13 @@
   const code = q.get('code'), err = q.get('error');
   document.getElementById('msg').textContent = code ? 'Autorização concedida. Seu código:' :
     (err ? 'O TikTok recusou a autorização: ' + err : 'Nenhum código recebido.');
-  if (code) document.getElementById('code').textContent = code + (q.get('state') ? '  (state: ' + q.get('state') + ')' : '');
-  // Fluxo iniciado pela página de aprovação (rede local): devolve o código para ela automaticamente.
   const st = q.get('state') || '';
-  if (code && /^eb-[A-Za-z0-9_-]{10,60}$/.test(st)) {
+  const auto = code && /^eb-[A-Za-z0-9_-]{10,60}$/.test(st);
+  if (code && !auto) document.getElementById('code').textContent = code + (q.get('state') ? '  (state: ' + q.get('state') + ')' : '');
+  // Fluxo iniciado pela página de aprovação (rede local): devolve o código para ela automaticamente.
+  if (auto) {
     document.getElementById('msg').textContent = 'Autorização concedida. Voltando para a página de aprovação…';
+    document.querySelector('.card .muted').style.display = 'none';
     location.replace('http://192.168.1.11:8780/tiktok/callback?code=' + encodeURIComponent(code) +
                      '&state=' + encodeURIComponent(st));
   }
